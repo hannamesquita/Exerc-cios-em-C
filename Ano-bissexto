@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int ehbissexto(int aa){
+    if(((aa % 400) == 0) && ((aa % 4 == 0) && (aa % 100) != 0)){
+        return 1;
+    } else {
+    return 0;
+    }
+}
+
+int main() {
+    int dd, mm, aa;
+
+    scanf("%d/%d/%d", &dd, &mm, &aa);
+
+    if(ehbissexto(aa)){
+        printf("É bissexto");
+    } else {
+        printf("Não é bissexto");
+    }
+}
